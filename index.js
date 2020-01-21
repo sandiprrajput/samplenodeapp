@@ -2,7 +2,7 @@ var os = require('os')
 var http = require('http')
 
 function handleRequest(req, res) {
-  res.write('Hi there! I\'m being served from testing' + os.hostname())
+  res.write('Hi there! I\'m being served from testing server: ' + os.hostname())
   res.end()
 }
 
