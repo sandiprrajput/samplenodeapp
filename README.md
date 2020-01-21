@@ -1,4 +1,4 @@
-This is sample nodejs application code, using docker to build and run the application server.
+# This is sample nodejs application code, using docker to build and run the application server.
 
 Need to create a docker file for creating the docker image and run that image on docker container. Please check the below docker file for understanding.
 
@@ -11,23 +11,23 @@ WORKDIR /usr/src/app
 #Copy the package json file
 COPY package*.json ./
 
-# Install application dependencies
+#Install application dependencies
 RUN npm install
 
 #copy your application source code bundler inside docker image. 
 COPY ./ ./
 
-# Application runs on port 3000. Expose port 3000 
+#Application runs on port 3000. Expose port 3000 
 EXPOSE 3000
 
-# Run command
+#Run command
 CMD ["node","index.js"]
 
 
 I am using the AWS cloud platform to set up this application using below AWS resources:
-ALB
-ECS
-ECR
+# ALB
+# ECS
+# ECR
  
 Used Jenkins pipeline for CI/CD.
 
